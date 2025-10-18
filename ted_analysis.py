@@ -37,9 +37,9 @@ print("="*70 + "\n")
 
 print("Loading data...")
 df_main = pd.read_csv('ted_main.csv')
-df_transcripts = pd.read_csv('transcripts.csv')
+df_transcripts = pd.read_excel('transcripts.xlsb', engine='pyxlsb')
 print(f"Loaded {df_main.shape[0]} talks from ted_main.csv")
-print(f"Loaded {df_transcripts.shape[0]} transcripts\n")
+print(f"Loaded {df_transcripts.shape[0]} transcripts from transcripts.xlsb\n")
 
 print("Dataset info:")
 print(df_main.head())
